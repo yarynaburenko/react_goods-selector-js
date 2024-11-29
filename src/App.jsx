@@ -16,7 +16,7 @@ export const goods = [
 ];
 
 export const App = () => {
-  const [selectedGood, setSelectedGood] = useState(''); // Початкове значення порожнє
+  const [selectedGood, setSelectedGood] = useState('Jam'); // Початкове значення порожнє
 
   const selectGood = good => {
     setSelectedGood(good); // Встановлюємо вибраний товар
@@ -29,8 +29,7 @@ export const App = () => {
   return (
     <main className="section container">
       {selectedGood.length === 0 ? (
-        // Якщо нічого не вибрано, показуємо цей заголовок
-        <h1 className="title">Jam is selected</h1>
+        <h1 className="title">No goods selected</h1>
       ) : (
         // Якщо товар вибрано, показуємо назву товару та кнопку для очищення
         <h1 className="title is-flex is-align-items-center">
